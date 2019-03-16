@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        tools:showIn="@layout/activity_main"
+        android:id="@+id/layout"
+        tools:context=".MainActivity">
+
+    <androidx.constraintlayout.widget.Placeholder
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:id="@+id/placeholder"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+    <androidx.appcompat.widget.AppCompatImageView
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_margin="8dp"
+            android:id="@+id/imageAndroid"
+            android:onClick="swapView"
+            android:src="@drawable/ic_android"/>
+
+    <androidx.appcompat.widget.AppCompatImageView
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@id/imageAndroid"
+            app:layout_constraintEnd_toStartOf="@id/imageCake"
+            android:layout_margin="8dp"
+            android:onClick="swapView"
+            android:id="@+id/imageBrightness"
+            android:src="@drawable/ic_brightness"/>
+
+    <androidx.appcompat.widget.AppCompatImageView
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@id/imageBrightness"
+            app:layout_constraintEnd_toStartOf="@id/imageRun"
+            android:layout_margin="8dp"
+            android:id="@+id/imageCake"
+            android:onClick="swapView"
+            android:src="@drawable/ic_cake"/>
+
+    <androidx.appcompat.widget.AppCompatImageView
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_margin="8dp"
+            android:onClick="swapView"
+            android:id="@+id/imageRun"
+            android:src="@drawable/ic_run"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
